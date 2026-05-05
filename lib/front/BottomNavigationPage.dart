@@ -28,16 +28,15 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ứng Dụng Quản Lý Thư Viện'),
-        backgroundColor: Colors.blueAccent,
-        foregroundColor: Colors.white,
-      ),
+      // Đã xóa toàn bộ phần appBar ở đây
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu_book), label: 'Content'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.menu_book),
+            label: 'Content',
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.info), label: 'About'),
         ],
         currentIndex: _currentIndex,
