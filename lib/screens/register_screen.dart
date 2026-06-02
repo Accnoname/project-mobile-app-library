@@ -198,9 +198,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             Gap.lgHeight,
                             TextFieldApp(
                               label: const Text('Mật khẩu'),
-                              hintText: '••••••••',
+                              hintText: 'Nhập mật khẩu',
                               controller: _passwordController,
-                              obscureText: true,
+                              obscureText: false,
                               prefixIcon: const Icon(Icons.lock_outline),
                               fillColor: colorScheme.surfaceVariant,
                               validator: (value) {
@@ -216,9 +216,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             Gap.lgHeight,
                             TextFieldApp(
                               label: const Text('Nhập lại mật khẩu'),
-                              hintText: '••••••••',
+                              hintText: 'Nhập lại mật khẩu',
                               controller: _confirmController,
-                              obscureText: true,
+                              obscureText: false,
                               prefixIcon: const Icon(Icons.lock_outline),
                               fillColor: colorScheme.surfaceVariant,
                               validator: (value) {
