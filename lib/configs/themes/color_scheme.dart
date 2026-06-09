@@ -1,65 +1,103 @@
 import 'package:flutter/material.dart';
 
+// ─── Light: Clean White + Navy/Indigo accent ───────────────────────────────
 const lightColorScheme = ColorScheme(
   brightness: Brightness.light,
-  primary: Color.fromARGB(255, 70, 150, 235),
-  onPrimary: Colors.black,
-  primaryContainer: Color(0xFFFD6326),
-  onPrimaryContainer: Color(0xFF21005D),
-  secondary: Color(0xFFFFFFFF),
+
+  // Primary = Navy Indigo
+  primary: Color(0xFF3B5BDB),          // indigo-600
+  onPrimary: Color(0xFFFFFFFF),
+
+  primaryContainer: Color(0xFFDBE4FF),  // indigo-100
+  onPrimaryContainer: Color(0xFF1A237E),
+
+  // Secondary = Soft slate
+  secondary: Color(0xFF748FFC),         // indigo-400 (hover accent)
   onSecondary: Color(0xFFFFFFFF),
-  secondaryContainer: Colors.green,
-  onSecondaryContainer: Color(0xFF5E5E5E),
-  tertiary: Color(0xFF909090),
+
+  secondaryContainer: Color(0xFFEEF2FF), // indigo-50
+  onSecondaryContainer: Color(0xFF364FC7),
+
+  // Tertiary = Teal success
+  tertiary: Color(0xFF0CA678),
   onTertiary: Color(0xFFFFFFFF),
-  tertiaryContainer: Color(0xFFFFFFFF),
-  onTertiaryContainer: Color(0xFF31111D),
-  error: Color(0xFFB3261E),
+  tertiaryContainer: Color(0xFFD3F9D8),
+  onTertiaryContainer: Color(0xFF0B7A57),
+
+  // Error
+  error: Color(0xFFE03131),
   onError: Color(0xFFFFFFFF),
-  errorContainer: Color(0xFFF9DEDC),
-  onErrorContainer: Color(0xFF410E0B),
-  outline: Color(0xFF909090),
-  surface: Color(0xFFF6F2F2),
-  onSurface: Color(0xFF1C1B1F),
-  surfaceContainerHighest: Color(0xFFE7E0EC),
-  onSurfaceVariant: Color(0xFF49454F),
-  inverseSurface: Color(0xFF313033),
-  onInverseSurface: Color(0xFFF4EFF4),
-  inversePrimary: Color(0xFFD0BCFF),
-  shadow: Colors.grey,
-  surfaceTint: Color(0xFF6750A4),
-  outlineVariant: Color(0xFFCAC4D0),
+  errorContainer: Color(0xFFFFE3E3),
+  onErrorContainer: Color(0xFFC92A2A),
+
+  // Outline
+  outline: Color(0xFFCED4DA),
+  outlineVariant: Color(0xFFE9ECEF),
+
+  // Surface
+  surface: Color(0xFFFFFFFF),
+  onSurface: Color(0xFF212529),
+  surfaceContainerHighest: Color(0xFFF1F3F9),
+  onSurfaceVariant: Color(0xFF6C757D),
+
+  // Inverse
+  inverseSurface: Color(0xFF1C1F2E),
+  onInverseSurface: Color(0xFFE9ECEF),
+  inversePrimary: Color(0xFF748FFC),
+
+  // Misc
+  shadow: Color(0xFF868E96),
+  surfaceTint: Color(0xFF3B5BDB),
   scrim: Color(0xFF000000),
 );
 
+// ─── Dark: Deep Navy + Indigo accent ───────────────────────────────────────
 const darkColorScheme = ColorScheme(
   brightness: Brightness.dark,
-  primary: Color.fromARGB(255, 12, 3, 27),
-  onPrimary: Color(0x00000000),
-  primaryContainer: Color(0xFF4F378B),
-  onPrimaryContainer: Color(0xFFEADDFF),
-  secondary: Color.fromARGB(255, 125, 51, 231),
-  onSecondary: Color.fromARGB(255, 215, 216, 217),
-  secondaryContainer: Color.fromARGB(255, 204, 176, 246),
-  onSecondaryContainer: Color(0xFFE8DEF8),
-  tertiary: Color.fromARGB(25, 255, 255, 255),
-  onTertiary: Color.fromARGB(255, 255, 199, 56),
-  tertiaryContainer: Colors.green,
-  onTertiaryContainer: Colors.white,
-  error: Colors.red,
-  onError: Color(0xFF601410),
-  errorContainer: Color(0xFF8C1D18),
-  onErrorContainer: Color(0xFFF9DEDC),
-  outline: Color.fromARGB(255, 143, 139, 150),
-  surface: Color.fromARGB(255, 36, 28, 50),
-  onSurface: Color.fromARGB(255, 168, 168, 169),
-  surfaceContainerHighest: Color(0xFF49454F),
-  onSurfaceVariant: Color.fromARGB(255, 215, 217, 217),
-  inverseSurface: Color.fromARGB(255, 204, 176, 246),
-  onInverseSurface: Color(0xFF313033),
-  inversePrimary: Color.fromARGB(255, 85, 143, 255),
-  shadow: Color.fromARGB(255, 80, 73, 91),
-  surfaceTint: Color.fromARGB(255, 92, 86, 102),
-  outlineVariant: Color.fromARGB(127, 84, 65, 113),
-  scrim: Color.fromARGB(127, 61, 53, 73),
+
+  // Primary = Indigo glow
+  primary: Color(0xFF4C6EF5),
+  onPrimary: Color(0xFFFFFFFF),
+
+  primaryContainer: Color(0xFF2C3476),
+  onPrimaryContainer: Color(0xFFDBE4FF),
+
+  // Secondary
+  secondary: Color(0xFF748FFC),
+  onSecondary: Color(0xFFFFFFFF),
+
+  secondaryContainer: Color(0xFF2C3476),
+  onSecondaryContainer: Color(0xFFDBE4FF),
+
+  // Tertiary = Teal
+  tertiary: Color(0xFF12B886),
+  onTertiary: Color(0xFFFFFFFF),
+  tertiaryContainer: Color(0xFF087F5B),
+  onTertiaryContainer: Color(0xFFD3F9D8),
+
+  // Error
+  error: Color(0xFFFF6B6B),
+  onError: Color(0xFF1C1F2E),
+  errorContainer: Color(0xFF7C1D1D),
+  onErrorContainer: Color(0xFFFFE3E3),
+
+  // Outline
+  outline: Color(0xFF495057),
+  outlineVariant: Color(0xFF343A40),
+
+  // Surface = deep navy
+  surface: Color(0xFF141520),
+  onSurface: Color(0xFFE9ECEF),
+  surfaceContainerHighest: Color(0xFF1E2130),
+  onSurfaceVariant: Color(0xFFADB5BD),
+
+  // Inverse
+  inverseSurface: Color(0xFFE9ECEF),
+  onInverseSurface: Color(0xFF141520),
+  inversePrimary: Color(0xFF3B5BDB),
+
+  // Misc
+  shadow: Color(0xFF000000),
+  surfaceTint: Color(0xFF4C6EF5),
+  scrim: Color(0xFF000000),
 );
