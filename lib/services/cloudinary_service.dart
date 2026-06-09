@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 
+// dich vu upload
 class CloudinaryService {
   final String cloudName = 'dgfmiwien';
   final String uploadPreset = 'sneakers';
