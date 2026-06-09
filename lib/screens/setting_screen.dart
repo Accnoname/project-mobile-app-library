@@ -9,6 +9,7 @@ import 'package:library_management_app/services/theme_provider.dart';
 import 'package:library_management_app/services/user_services.dart';
 import 'package:provider/provider.dart';
 
+// cai dat thong tin nguoi dung
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 

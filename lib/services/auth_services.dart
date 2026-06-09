@@ -6,7 +6,7 @@ class AuthServices {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // Đăng ký tài khoản mới và tạo document trong Firestore
+  // Đăng ký tài khoản mới và tạo document trong firestore
   Future<User?> signUpWithEmail({
     required String email,
     required String password,
