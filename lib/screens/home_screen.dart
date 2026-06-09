@@ -9,6 +9,7 @@ import 'package:library_management_app/screens/setting_screen.dart';
 import 'package:library_management_app/services/loan_service.dart';
 import 'book_screen.dart';
 
+// trang chu
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
