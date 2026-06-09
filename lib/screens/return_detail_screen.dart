@@ -5,6 +5,7 @@ import 'package:library_management_app/configs/themes/gap.dart';
 import 'package:library_management_app/models/loan_model.dart';
 import 'package:intl/intl.dart';
 
+// chi tiet phieu tra
 class ReturnDetailScreen extends StatelessWidget {
   final LoanModel loan;
 
