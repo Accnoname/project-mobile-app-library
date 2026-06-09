@@ -20,6 +20,7 @@ class BookService {
     await _books.add(book.toJson());
   }
 
+  //
   Future<void> updateBook(BookModel book) async {
     await _books.doc(book.id).update(book.toJson());
   }
