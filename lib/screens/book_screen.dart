@@ -155,12 +155,10 @@ class _BookScreenState extends State<BookScreen> {
                 ),
               ),
               onTap: () async {
-                // mở màn hình chỉnh sửa, truyền BookModel
                 await Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => EditBookScreen(book: book)),
                 );
-                // stream sẽ tự cập nhật khi có thay đổi
               },
             );
           },
@@ -169,6 +167,7 @@ class _BookScreenState extends State<BookScreen> {
     );
   }
 
+  //m
   Widget _buildLeadingImage(BookModel book) {
     const double w = 48;
     const double h = 64;
