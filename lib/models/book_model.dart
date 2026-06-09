@@ -28,7 +28,7 @@ class BookModel {
       availableCount: json['availableCount'] ?? 0,
     );
   }
-
+  //
   Map<String, dynamic> toJson() {
     return {
       'title': title,
@@ -40,5 +40,3 @@ class BookModel {
     };
   }
 }
-
-
