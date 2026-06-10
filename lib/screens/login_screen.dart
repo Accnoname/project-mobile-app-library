@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:library_management_app/configs/themes/common.dart';
 import 'package:library_management_app/configs/themes/gap.dart';
 import 'package:library_management_app/screens/home_screen.dart';
+import 'package:library_management_app/screens/register_screen.dart';
 import 'package:library_management_app/services/auth_services.dart';
 import 'package:library_management_app/services/dialog_service.dart';
 import 'package:library_management_app/widgets/text_field_app.dart';
@@ -231,34 +232,75 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           const SizedBox(height: 8),
 
-                          // Nút đăng nhập (chỉ 1 nút)
+                          // Nút đăng nhập + đăng ký
                           if (_isLoading)
                             const Center(
                               child: CircularProgressIndicator(
                                   color: Color(0xFF8B4513)),
                             )
                           else
-                            SizedBox(
-                              height: 52,
-                              child: ElevatedButton.icon(
-                                onPressed: _handleLogin,
-                                icon: const Icon(Icons.login_rounded,
-                                    color: Colors.white),
-                                label: const Text(
-                                  'Đăng nhập',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.white,
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: SizedBox(
+                                    height: 52,
+                                    child: ElevatedButton.icon(
+                                      onPressed: _handleLogin,
+                                      icon: const Icon(Icons.login_rounded,
+                                          color: Colors.white),
+                                      label: const Text(
+                                        'Đăng nhập',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color(0xFF8B4513),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: radius16),
+                                        elevation: 2,
+                                      ),
+                                    ),
                                   ),
                                 ),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFF8B4513),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: radius16),
-                                  elevation: 2,
+                                const SizedBox(width: 10),
+                                Expanded(
+                                  child: SizedBox(
+                                    height: 52,
+                                    child: OutlinedButton.icon(
+                                      onPressed: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) => const RegisterScreen(),
+                                        ),
+                                      ),
+                                      icon: const Icon(
+                                        Icons.person_add_rounded,
+                                        color: Color(0xFF8B4513),
+                                        size: 18,
+                                      ),
+                                      label: const Text(
+                                        'Đăng ký',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color(0xFF8B4513),
+                                        ),
+                                      ),
+                                      style: OutlinedButton.styleFrom(
+                                        side: const BorderSide(
+                                          color: Color(0xFF8B4513),
+                                          width: 1.5,
+                                        ),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: radius16),
+                                      ),
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                         ],
                       ),
