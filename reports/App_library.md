@@ -908,6 +908,101 @@ Hiệu ứng khi chọn tab: nền tròn mờ màu primary + text đậm + icon 
 
 ---
 
+### **3.6. Wireframe / Prototype – Thiết kế màn hình** {#wireframe-prototype}
+
+Phần này trình bày bản **thiết kế giao diện (Wireframe/Mockup)** cho từng màn hình chính của ứng dụng trước khi tiến hành lập trình. Các bản vẽ thể hiện bố cục (layout), luồng điều hướng và vị trí các thành phần UI.
+
+#### **Màn hình 1 – Đăng nhập / Đăng ký (Login Screen)**
+
+Mô tả layout:
+- Toàn màn hình: ảnh nền thư viện + overlay gradient nâu tối
+- Form card màu cream nổi bật ở giữa
+- Các trường nhập liệu: Email, Mật khẩu (có nút 👁 ẩn/hiện)
+- Hai nút song song: **Đăng nhập** (filled) · **Đăng ký** (outlined)
+
+![Wireframe màn hình Đăng nhập](assets/images/wireframe_login.png)
+
+---
+
+#### **Màn hình 2 – Trang chủ (Home Screen)**
+
+Mô tả layout:
+- **Header** (expandable): ảnh thư viện, tên thủ thư động, icon cài đặt
+- **Thanh tìm kiếm nhanh**: nền cream, icon kính lúp màu nâu
+- **Tổng quan**: 3 thẻ stat (Tổng sách · Mượn · Trả) — dữ liệu thời gian thực
+- **Truy cập nhanh**: grid 4 icon chức năng
+- **Chức năng**: danh sách 5 mục với badge số liệu và mũi tên điều hướng
+- **Bottom Navigation**: 5 tab (Trang chủ · Sách · Dashboard · Mượn · Trả)
+
+![Wireframe màn hình Trang chủ](assets/images/wireframe_home.png)
+
+---
+
+#### **Màn hình 3 – Quản lý Sách (Book Screen)**
+
+Mô tả layout:
+- AppBar với nút **Tìm kiếm** và nút **Thêm sách (+)**
+- Ô tìm kiếm theo tên/tác giả
+- Bộ lọc thể loại (filter chips ngang)
+- Danh sách sách dạng card: ảnh bìa · tiêu đề · tác giả · số lượng · nút Sửa/Xoá
+
+![Wireframe màn hình Quản lý Sách](assets/images/wireframe_books.png)
+
+---
+
+#### **Màn hình 4 – Quản lý Phiếu Mượn (Loan Screen)**
+
+Mô tả layout:
+- Header với tổng số phiếu mượn
+- Danh sách phiếu mượn dạng card:
+  - Tên độc giả · Danh sách sách mượn · Ngày mượn · Hạn trả
+  - Badge trạng thái: **Đang mượn** (cam) / **Quá hạn** (đỏ)
+  - Nút "Chi tiết" → màn hình `loan_detail_screen.dart`
+- Nút **Thêm phiếu mượn (+)** góc trên phải
+
+![Wireframe màn hình Phiếu Mượn](assets/images/wireframe_loan.png)
+
+---
+
+#### **Màn hình 5 – Cài đặt (Settings Screen)**
+
+Mô tả layout:
+- Header mở rộng: ảnh thư viện + avatar thủ thư + tên + email + nút đăng xuất
+- **Nút ← Quay lại** góc trên trái (chỉ hiện khi navigate từ màn hình khác)
+- Nhóm **Tài khoản**: Thông tin cá nhân · Đổi mật khẩu
+- Nhóm **Ứng dụng**: Toggle Dark/Light Mode · Toggle Thông báo
+- Nhóm **Hệ thống**: Phiên bản · Đăng xuất
+
+![Wireframe màn hình Cài đặt](assets/images/wireframe_settings.png)
+
+---
+
+#### **Luồng điều hướng tổng thể (Navigation Flow)**
+
+```
+[Màn hình Đăng nhập]
+        │ Đăng nhập thành công
+        ▼
+[Trang chủ] ──── Bottom Nav ────► [Quản lý Sách]
+    │                                    │
+    │                              [Thêm/Sửa Sách]
+    │
+    ├──── Bottom Nav ────► [Dashboard / Thống kê]
+    │
+    ├──── Bottom Nav ────► [Phiếu Mượn]
+    │                           │
+    │                     [Chi tiết Phiếu Mượn]
+    │
+    ├──── Bottom Nav ────► [Phiếu Trả]
+    │
+    └──── Settings icon ─► [Cài đặt]
+                                │
+                          [Thông tin cá nhân]
+                          [Đổi mật khẩu]
+```
+
+---
+
 4. ## **Mã nguồn chính và giao diện Demo** {#mã-nguồn-chính-và-giao-diện-demo}
 
 1. Lấy availableCount (tổng số lượng) từ document của sách đó (ví dụ: 30).
