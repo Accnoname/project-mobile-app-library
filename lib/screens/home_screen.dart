@@ -181,10 +181,10 @@ class _HomeTabState extends State<HomeTab> {
           slivers: [
             // ── Header ────────────────────────────────────────────────────
             SliverAppBar(
-              expandedHeight: 170,
+              expandedHeight: 210,
               floating: false,
               pinned: true,
-              backgroundColor: colorScheme.primary,
+              backgroundColor: const Color(0xFF8B4513),
               automaticallyImplyLeading: false,
               actions: [
                 IconButton(
@@ -198,58 +198,73 @@ class _HomeTabState extends State<HomeTab> {
                 const SizedBox(width: 4),
               ],
               flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Color(0xFF3B5BDB), Color(0xFF364FC7)],
+                background: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    // Ảnh thư viện nền
+                    Image.asset(
+                      'assets/images/library_banner.png',
+                      fit: BoxFit.cover,
                     ),
-                  ),
-                  child: SafeArea(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 16, 72, 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.2),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: const Icon(Icons.local_library_rounded,
-                                    color: Colors.white, size: 20),
-                              ),
-                              const SizedBox(width: 10),
-                              const Text(
-                                'Quản lý Thư Viện',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 14),
-                          Text(
-                            'Xin chào, $_displayName! 👋',
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 21,
-                                fontWeight: FontWeight.w700),
-                          ),
-                          const SizedBox(height: 4),
-                          const Text(
-                            'Hôm nay thư viện có gì mới?',
-                            style: TextStyle(color: Colors.white70, fontSize: 13),
-                          ),
-                        ],
+                    // Overlay gradient ấm áp
+                    Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Color(0xCC5C2A0D),  // nâu đậm 80% opacity
+                            Color(0xDD8B4513),  // amber brown 87%
+                          ],
+                        ),
                       ),
                     ),
-                  ),
+                    // Nội dung text
+                    SafeArea(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 16, 72, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.2),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: const Icon(Icons.local_library_rounded,
+                                      color: Colors.white, size: 20),
+                                ),
+                                const SizedBox(width: 10),
+                                const Text(
+                                  'Quản lý Thư Viện',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 14),
+                            Text(
+                              'Xin chào, $_displayName! 👋',
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            const SizedBox(height: 4),
+                            const Text(
+                              'Hôm nay thư viện có gì mới?',
+                              style: TextStyle(color: Colors.white70, fontSize: 13),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -311,8 +326,8 @@ class _HomeTabState extends State<HomeTab> {
                             label: 'Tổng sách',
                             count: bookCount,
                             icon: Icons.menu_book_rounded,
-                            color: const Color(0xFF7048E8),
-                            bg: const Color(0xFF7048E8).withOpacity(0.1),
+                            color: const Color(0xFF8B4513),
+                            bg: const Color(0xFF8B4513).withOpacity(0.12),
                             onTap: () => widget.onTabSelected(1),
                           ),
                         ),
@@ -322,8 +337,8 @@ class _HomeTabState extends State<HomeTab> {
                             label: 'Phiếu mượn',
                             count: borrowCount,
                             icon: Icons.download_rounded,
-                            color: colorScheme.primary,
-                            bg: colorScheme.primary.withOpacity(0.1),
+                            color: const Color(0xFFD2691E),
+                            bg: const Color(0xFFD2691E).withOpacity(0.12),
                             onTap: () => widget.onTabSelected(3),
                           ),
                         ),
@@ -333,8 +348,8 @@ class _HomeTabState extends State<HomeTab> {
                             label: 'Phiếu trả',
                             count: returnCount,
                             icon: Icons.upload_rounded,
-                            color: const Color(0xFF0CA678),
-                            bg: const Color(0xFF0CA678).withOpacity(0.1),
+                            color: const Color(0xFF2E7D32),
+                            bg: const Color(0xFF2E7D32).withOpacity(0.12),
                             onTap: () => widget.onTabSelected(4),
                           ),
                         ),
@@ -356,25 +371,25 @@ class _HomeTabState extends State<HomeTab> {
                         _QuickItem(
                           icon: Icons.menu_book_rounded,
                           label: 'Quản lý\nSách',
-                          color: const Color(0xFF7048E8),
+                          color: const Color(0xFF8B4513),
                           onTap: () => widget.onTabSelected(1),
                         ),
                         _QuickItem(
                           icon: Icons.receipt_long_rounded,
                           label: 'Phiếu\nMượn',
-                          color: colorScheme.primary,
+                          color: const Color(0xFFD2691E),
                           onTap: () => widget.onTabSelected(3),
                         ),
                         _QuickItem(
                           icon: Icons.assignment_return_rounded,
                           label: 'Phiếu\nTrả',
-                          color: const Color(0xFF0CA678),
+                          color: const Color(0xFF2E7D32),
                           onTap: () => widget.onTabSelected(4),
                         ),
                         _QuickItem(
                           icon: Icons.bar_chart_rounded,
                           label: 'Thống\nkê',
-                          color: const Color(0xFFE03131),
+                          color: const Color(0xFFB71C1C),
                           onTap: () => widget.onTabSelected(2),
                         ),
                       ],
@@ -388,11 +403,11 @@ class _HomeTabState extends State<HomeTab> {
                     // UC-2: Quản lý Sách
                     _ActivityTile(
                       icon: Icons.menu_book_rounded,
-                      iconColor: const Color(0xFF7048E8),
+                      iconColor: const Color(0xFF8B4513),
                       title: 'Quản lý Sách',
                       subtitle: 'Thêm, sửa, xóa thông tin sách trong thư viện',
                       badge: '$bookCount cuốn',
-                      badgeColor: const Color(0xFF7048E8),
+                      badgeColor: const Color(0xFF8B4513),
                       onTap: () => widget.onTabSelected(1),
                       isDark: isDark,
                     ),
@@ -401,11 +416,11 @@ class _HomeTabState extends State<HomeTab> {
                     // UC-3: Quản lý Phiếu Mượn
                     _ActivityTile(
                       icon: Icons.receipt_long_rounded,
-                      iconColor: colorScheme.primary,
+                      iconColor: const Color(0xFFD2691E),
                       title: 'Phiếu Mượn',
                       subtitle: 'Tạo và quản lý phiếu mượn sách cho độc giả',
                       badge: '$borrowCount phiếu',
-                      badgeColor: colorScheme.primary,
+                      badgeColor: const Color(0xFFD2691E),
                       onTap: () => widget.onTabSelected(3),
                       isDark: isDark,
                     ),
@@ -414,11 +429,11 @@ class _HomeTabState extends State<HomeTab> {
                     // UC-4: Quản lý Phiếu Trả
                     _ActivityTile(
                       icon: Icons.assignment_return_rounded,
-                      iconColor: const Color(0xFF0CA678),
+                      iconColor: const Color(0xFF2E7D32),
                       title: 'Phiếu Trả',
                       subtitle: 'Ghi nhận sách trả, cập nhật tồn kho tự động',
                       badge: '$returnCount phiếu',
-                      badgeColor: const Color(0xFF0CA678),
+                      badgeColor: const Color(0xFF2E7D32),
                       onTap: () => widget.onTabSelected(4),
                       isDark: isDark,
                     ),
@@ -427,11 +442,11 @@ class _HomeTabState extends State<HomeTab> {
                     // UC-6: Thống kê
                     _ActivityTile(
                       icon: Icons.bar_chart_rounded,
-                      iconColor: const Color(0xFFE03131),
+                      iconColor: const Color(0xFFB71C1C),
                       title: 'Thống kê Báo cáo',
                       subtitle: 'Xem biểu đồ mượn/trả, lọc theo ngày và thể loại',
                       badge: 'Dashboard',
-                      badgeColor: const Color(0xFFE03131),
+                      badgeColor: const Color(0xFFB71C1C),
                       onTap: () => widget.onTabSelected(2),
                       isDark: isDark,
                     ),
@@ -440,11 +455,11 @@ class _HomeTabState extends State<HomeTab> {
                     // UC-5: Cài đặt tài khoản
                     _ActivityTile(
                       icon: Icons.manage_accounts_rounded,
-                      iconColor: const Color(0xFFF59F00),
+                      iconColor: const Color(0xFFC17900),
                       title: 'Tài khoản & Cài đặt',
                       subtitle: 'Chỉnh sửa thông tin cá nhân, đổi mật khẩu, theme',
                       badge: 'Cài đặt',
-                      badgeColor: const Color(0xFFF59F00),
+                      badgeColor: const Color(0xFFC17900),
                       onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (_) => const SettingsScreen()),
