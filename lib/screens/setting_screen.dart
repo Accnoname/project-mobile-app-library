@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:library_management_app/common/helpers/extentions.dart';
 import 'package:library_management_app/configs/assets/app_images.dart';
 import 'package:library_management_app/models/user_model.dart';
 import 'package:library_management_app/screens/change_password_screen.dart';
@@ -147,10 +146,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
           ),
 
           SliverToBoxAdapter(

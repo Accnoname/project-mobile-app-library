@@ -53,7 +53,6 @@ class _LoanReturnScreenState extends State<LoanReturnScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     const returnColor = Color(0xFF0CA678);
 

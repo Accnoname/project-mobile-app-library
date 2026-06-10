@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:library_management_app/configs/themes/common.dart';
-import 'package:library_management_app/configs/themes/gap.dart';
 import 'package:library_management_app/screens/home_screen.dart';
 import 'package:library_management_app/screens/register_screen.dart';
 import 'package:library_management_app/services/auth_services.dart';
