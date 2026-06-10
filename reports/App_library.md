@@ -8,7 +8,7 @@
 
 # THƯ VIỆN
 
-**Giảng viên hướng dẫn: THS. NGUYỄN VĂN CƯỜNG Sinh viên thực hiện: [Họ và tên Sinh viên thực hiện] (MSSV: [MSSV])**
+**Giảng viên hướng dẫn: THS. NGUYỄN VĂN CƯỜNG Sinh viên thực hiện: Nguyễn Trung Hiếu (23011098), Trương Bùi Huy Hiếu (23010885), Nguyễn Văn Trọng (23010748)**
 
 **Khoá: K16 – 2022 \- 2026**
 
@@ -36,7 +36,7 @@ Chúng tôi xin chịu trách nhiệm hoàn toàn về nội dung của Đồ á
 
 Hà nội, ngày 01 tháng 11 năm 2025
 
-[Họ và tên các thành viên thực hiện]
+Nguyễn Trung Hiếu, Trương Bùi Huy Hiếu, Nguyễn Văn Trọng
 
 # **PHÂN CÔNG NHIỆM VỤ ĐỒ ÁN** {#phân-công-nhiệm-vụ-đồ-án}
 
@@ -49,18 +49,11 @@ Hà nội, ngày 01 tháng 11 năm 2025
 | Làm slide | Thiết kế để trình bày ý tưởng. |
 | Làm video demo | Quay video các chức năng của app. |
 
-| Tên	sinh	viên/Mã sinh viên | Các công việc | Tỉ lệ |
+| Tên sinh viên / Mã sinh viên | Các công việc đảm nhiệm | Tỉ lệ hoàn thành |
 | :---- | :---- | :---- |
-| [Họ và tên Sinh viên 1] (MSSV: [MSSV 1]) – Trưởng nhóm | Phân công chi tiết các nhiệm vụ | ...% |
-|  | Xây dựng Front-end | ...% |
-|  | Xây dựng Back-end | ...% |
-|  | Viết báo cáo | ...% |
-|  | Làm video demo | ...% |
-| [Họ và tên Sinh viên 2] (MSSV: [MSSV 2]) | Phân công chi tiết các nhiệm vụ | ...% |
-|  | Xây dựng Front-end | ...% |
-|  | Xây dựng Back-end | ...% |
-|  | Viết báo cáo | ...% |
-|  | Làm slide | ...% |
+| **Trương Bùi Huy Hiếu** (23010885) – Trưởng nhóm | - Setup dự án Flutter & Git repository<br>- Thiết kế & Code giao diện UI Dashboard biểu đồ nâng cao<br>- Viết Unit Tests cho toàn bộ Models | 100% |
+| **Nguyễn Trung Hiếu** (23011098) | - Phân tích yêu cầu hệ thống & User Stories<br>- Thiết kế Sơ đồ UML (Class Diagram & Sequence Diagrams)<br>- Biên soạn tài liệu báo cáo đồ án chi tiết | 100% |
+| **Nguyễn Văn Trọng** (23010748) | - Setup Cơ sở dữ liệu Firebase Firestore và Authentication<br>- Tích hợp dịch vụ ORM & Service mapping dữ liệu lên Firestore<br>- Viết Unit Tests kiểm thử các Model | 100% |
 
 ĐẠI HỌC PHENIKAA TRƯỜNG CÔNG NGHỆ THÔNG TIN
 

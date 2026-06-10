@@ -1,7 +1,7 @@
 # 📚 Library Management App
 
 > **Bài thực hành số 6**  
-> **Sinh viên:** [Họ và tên bạn] — MSSV: [MSSV của bạn]
+> **Sinh viên:** Trương Bùi Huy Hiếu (23010885), Nguyễn Trung Hiếu (23011098), Nguyễn Văn Trọng (23010748)
 
 ---
 
@@ -262,14 +262,13 @@ Firestore
 
 ---
 
-## 👨‍💻 Tác giả
+## 👨‍💻 Nhóm tác giả thực hiện
 
-| Thông tin | Chi tiết |
-|---|---|
-| **Họ và tên** | [Họ và tên bạn] |
-| **MSSV** | [MSSV của bạn] |
-| **Bài thực hành** | Số 6 |
-| **Môn học** | Lập trình Di động |
+| Họ và tên | MSSV | Vai trò chính |
+|---|---|---|
+| **Trương Bùi Huy Hiếu** (Nhóm trưởng) | 23010885 | Phát triển Front-end UI & Dashboard biểu đồ, viết Unit Test |
+| **Nguyễn Trung Hiếu** | 23011098 | Phân tích yêu cầu hệ thống, vẽ sơ đồ UML & Soạn thảo báo cáo |
+| **Nguyễn Văn Trọng** | 23010748 | Cấu hình CSDL Firebase & ORM mapping, viết Unit Test |
 
 ## CÂU 1: USER STORIES (CÂU CHUYỆN NGƯỜI DÙNG)
 Ứng dụng được thiết kế chủ yếu dành cho vai trò "Thủ thư" (Librarian). Các câu chuyện người dùng (User Stories) cốt lõi bao gồm:
