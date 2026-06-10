@@ -34,7 +34,7 @@ slide = prs.slides.add_slide(title_slide_layout)
 title = slide.shapes.title
 subtitle = slide.placeholders[1]
 title.text = "BÁO CÁO BÀI TẬP LỚN CUỐI KỲ - LỚP N03"
-subtitle.text = "Ứng dụng Quản lý Thư viện trên thiết bị di động\nNhóm thực hiện:\n1. Trương Bùi Huy Hiếu (23010885) - Nhóm trưởng\n2. Nguyễn Trung Hiếu (23011098)\n3. Nguyễn Văn Trọng (23010748)\nĐại học Phenikaa"
+subtitle.text = "Ứng dụng Quản lý Thư viện trên thiết bị di động\nNhóm thực hiện:\n1. Nguyễn Trung Hiếu (23011098)\n2. Trương Bùi Huy Hiếu (23010885)\n3. Nguyễn Văn Trọng (23010748)\nĐại học Phenikaa"
 
 # Slide 2: Agenda
 add_slide(
@@ -174,8 +174,8 @@ add_slide(
         "- Link Github: https://github.com/Accnoname/project-mobile-app-library",
         "- Link Demo: (Điền link Firebase Hosting hoặc Youtube Demo)",
         "Đóng góp của nhóm:",
-        "- Trương Bùi Huy Hiếu (23010885 - Nhóm trưởng): Code giao diện, Dashboard thống kê, viết Unit Test.",
         "- Nguyễn Trung Hiếu (23011098): Phân tích hệ thống, vẽ sơ đồ UML, viết báo cáo.",
+        "- Trương Bùi Huy Hiếu (23010885): Code giao diện, Dashboard thống kê, viết Unit Test.",
         "- Nguyễn Văn Trọng (23010748): Thiết lập CSDL Firebase, ORM mapping, viết Unit Test."
     ]
 )

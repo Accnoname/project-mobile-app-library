@@ -51,8 +51,8 @@ Nguyễn Trung Hiếu, Trương Bùi Huy Hiếu, Nguyễn Văn Trọng
 
 | Tên sinh viên / Mã sinh viên | Các công việc đảm nhiệm | Tỉ lệ hoàn thành |
 | :---- | :---- | :---- |
-| **Trương Bùi Huy Hiếu** (23010885) – Trưởng nhóm | - Setup dự án Flutter & Git repository<br>- Thiết kế & Code giao diện UI Dashboard biểu đồ nâng cao<br>- Viết Unit Tests cho toàn bộ Models | 100% |
 | **Nguyễn Trung Hiếu** (23011098) | - Phân tích yêu cầu hệ thống & User Stories<br>- Thiết kế Sơ đồ UML (Class Diagram & Sequence Diagrams)<br>- Biên soạn tài liệu báo cáo đồ án chi tiết | 100% |
+| **Trương Bùi Huy Hiếu** (23010885) | - Setup dự án Flutter & Git repository<br>- Thiết kế & Code giao diện UI Dashboard biểu đồ nâng cao<br>- Viết Unit Tests cho toàn bộ Models | 100% |
 | **Nguyễn Văn Trọng** (23010748) | - Setup Cơ sở dữ liệu Firebase Firestore và Authentication<br>- Tích hợp dịch vụ ORM & Service mapping dữ liệu lên Firestore<br>- Viết Unit Tests kiểm thử các Model | 100% |
 
 ĐẠI HỌC PHENIKAA TRƯỜNG CÔNG NGHỆ THÔNG TIN

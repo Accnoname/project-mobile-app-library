@@ -1,7 +1,7 @@
 # 📚 Library Management App
 
 > **Bài thực hành số 6**  
-> **Sinh viên:** Trương Bùi Huy Hiếu (23010885), Nguyễn Trung Hiếu (23011098), Nguyễn Văn Trọng (23010748)
+> **Sinh viên:** Nguyễn Trung Hiếu (23011098), Trương Bùi Huy Hiếu (23010885), Nguyễn Văn Trọng (23010748)
 
 ---
 
@@ -266,8 +266,8 @@ Firestore
 
 | Họ và tên | MSSV | Vai trò chính |
 |---|---|---|
-| **Trương Bùi Huy Hiếu** (Nhóm trưởng) | 23010885 | Phát triển Front-end UI & Dashboard biểu đồ, viết Unit Test |
 | **Nguyễn Trung Hiếu** | 23011098 | Phân tích yêu cầu hệ thống, vẽ sơ đồ UML & Soạn thảo báo cáo |
+| **Trương Bùi Huy Hiếu** | 23010885 | Phát triển Front-end UI & Dashboard biểu đồ, viết Unit Test |
 | **Nguyễn Văn Trọng** | 23010748 | Cấu hình CSDL Firebase & ORM mapping, viết Unit Test |
 
 ## CÂU 1: USER STORIES (CÂU CHUYỆN NGƯỜI DÙNG)
