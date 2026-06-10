@@ -7,6 +7,7 @@ import 'package:library_management_app/services/loan_service.dart';
 import 'package:intl/intl.dart';
 import 'package:library_management_app/services/user_services.dart';
 
+// thiem phieu tra
 class AddReturnScreen extends StatefulWidget {
   const AddReturnScreen({super.key});
 
@@ -97,9 +98,7 @@ class _AddReturnScreenState extends State<AddReturnScreen> {
                         },
                         child: Card(
                           elevation: 3,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: radius12,
-                          ),
+                          shape: RoundedRectangleBorder(borderRadius: radius12),
                           color: isSelected
                               ? colorScheme.primary.withAlpha(200)
                               : colorScheme.onSecondary,

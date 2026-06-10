@@ -277,4 +277,3 @@ class _CategoryItem {
   final Color color;
   _CategoryItem({required this.icon, required this.label, required this.color});
 }
-

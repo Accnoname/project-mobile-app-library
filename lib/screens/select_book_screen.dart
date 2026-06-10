@@ -40,7 +40,7 @@ class _SelectBookScreenState extends State<SelectBookScreen> {
       initial: currentQty > 0 ? currentQty : 1,
       maxQuantity: maxQuantity,
     );
-
+    //
     if (quantity != null && quantity > 0) {
       setState(() {
         _selectedBooksQty[book.id] = quantity;

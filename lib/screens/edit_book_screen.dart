@@ -13,6 +13,7 @@ class EditBookScreen extends StatefulWidget {
   State<EditBookScreen> createState() => _EditBookScreenState();
 }
 
+//cap nhat thong tin sach
 class _EditBookScreenState extends State<EditBookScreen> {
   final _formKey = GlobalKey<FormState>();
   final _picker = ImagePicker();
