@@ -18,11 +18,15 @@ dependencies:
   intl: ^0.20.2
   provider: ^6.1.5+1
   syncfusion_flutter_charts: ^31.1.19
+  widgetbook_annotation: ^3.7.0
+  widgetbook: ^3.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  widgetbook_generator: ^3.7.0
+  build_runner: ^2.4.9
 
 flutter:
   uses-material-design: true

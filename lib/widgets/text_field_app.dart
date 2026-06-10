@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:library_management_app/common/helpers/extentions.dart';
 import 'package:library_management_app/configs/themes/common.dart';
 import 'package:library_management_app/configs/themes/gap.dart';
+import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class TextFieldApp extends StatelessWidget {
   const TextFieldApp({
@@ -146,3 +147,37 @@ class TextFieldApp extends StatelessWidget {
     return child;
   }
 }
+
+@widgetbook.UseCase(
+  name: 'Default',
+  type: TextFieldApp,
+  designLink: 'https://www.figma.com/file/your-file-id/your-node-id',
+)
+Widget buildTextFieldUseCase(BuildContext context) {
+  return const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: TextFieldApp(
+      label: Text('Sample Label'),
+      hintText: 'Enter your text here...',
+      prefixIcon: Icon(Icons.person),
+    ),
+  );
+}
+
+@widgetbook.UseCase(
+  name: 'Password',
+  type: TextFieldApp,
+  designLink: 'https://www.figma.com/file/your-file-id/your-node-id',
+)
+Widget buildPasswordFieldUseCase(BuildContext context) {
+  return const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: TextFieldApp(
+      label: Text('Password'),
+      hintText: 'Enter your password',
+      prefixIcon: Icon(Icons.lock),
+      obscureText: true,
+    ),
+  );
+}
+

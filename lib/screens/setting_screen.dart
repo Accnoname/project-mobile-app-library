@@ -3,6 +3,7 @@ import 'package:library_management_app/common/helpers/extentions.dart';
 import 'package:library_management_app/configs/assets/app_images.dart';
 import 'package:library_management_app/models/user_model.dart';
 import 'package:library_management_app/screens/change_password_screen.dart';
+import 'package:library_management_app/screens/design_system_screen.dart';
 import 'package:library_management_app/screens/librarian_info_screen.dart';
 import 'package:library_management_app/screens/login_screen.dart';
 import 'package:library_management_app/services/theme_provider.dart';
@@ -203,6 +204,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               isDark: isDark,
                               onTap: () => themeProvider.toggleTheme(),
                             ),
+                            _Divider(isDark: isDark),
+                            _SettingsTile(
+                              icon: Icons.palette_outlined,
+                              iconColor: const Color(0xFF7048E8),
+                              title: 'Design System (Figma-like)',
+                              isDark: isDark,
+                              onTap: () => Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => const DesignSystemScreen())),
+                            ),
                           ],
                         ),
                         const SizedBox(height: 20),
@@ -256,6 +266,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 }
+
 
 // ── Sub-widgets ───────────────────────────────────────────────────────────────
 

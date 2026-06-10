@@ -1,7 +1,7 @@
 # 📚 Library Management App
 
 > **Bài thực hành số 6**  
-> **Sinh viên:** Trương Bùi Huy Hiếu — MSSV: 23010885
+> **Sinh viên:** [Họ và tên bạn] — MSSV: [MSSV của bạn]
 
 ---
 
@@ -266,23 +266,10 @@ Firestore
 
 | Thông tin | Chi tiết |
 |---|---|
-| **Họ và tên** | Trương Bùi Huy Hiếu |
-| **MSSV** | 23010885 |
+| **Họ và tên** | [Họ và tên bạn] |
+| **MSSV** | [MSSV của bạn] |
 | **Bài thực hành** | Số 6 |
 | **Môn học** | Lập trình Di động |
-
-
-# BÁO CÁO BÀI TẬP LỚN CUỐI KỲ - LỚP N03
-**Đề tài:** Ứng dụng Quản lý Thư viện trên thiết bị di động (Flutter & Firebase)
-
-**Giảng viên hướng dẫn:** [Tên Giảng viên]
-**Sinh viên thực hiện:** Trương Bùi Huy Hiếu (MSSV: 23010885)
-*(Nhóm trưởng / Các thành viên khác: Bạn điền thêm vào đây)*
-
-**Link Demo:** [Chèn link video demo hoặc link web Firebase Hosting]
-**Link GitHub:** [Chèn link repository Github]
-
----
 
 ## CÂU 1: USER STORIES (CÂU CHUYỆN NGƯỜI DÙNG)
 Ứng dụng được thiết kế chủ yếu dành cho vai trò "Thủ thư" (Librarian). Các câu chuyện người dùng (User Stories) cốt lõi bao gồm:
