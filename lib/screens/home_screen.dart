@@ -281,33 +281,29 @@ class _HomeTabState extends State<HomeTab> {
                       onTap: () => widget.onTabSelected(1),
                       child: Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 16, vertical: 12),
+                            horizontal: 16, vertical: 13),
                         decoration: BoxDecoration(
                           color: isDark
-                              ? const Color(0xFF1E2130)
-                              : Colors.white,
+                              ? const Color(0xFF2D1A00)
+                              : const Color(0xFFFFF3E0),
                           borderRadius: BorderRadius.circular(14),
                           border: Border.all(
                             color: isDark
-                                ? const Color(0xFF2C3248)
-                                : const Color(0xFFE9ECEF),
+                                ? const Color(0xFF6D4C41)
+                                : const Color(0xFFD7CCC8),
                           ),
                         ),
                         child: Row(
                           children: [
-                            Icon(Icons.search_rounded,
-                                color: isDark
-                                    ? const Color(0xFF6C757D)
-                                    : const Color(0xFFADB5BD),
+                            const Icon(Icons.search_rounded,
+                                color: Color(0xFF8B4513),
                                 size: 20),
                             const SizedBox(width: 10),
-                            Text(
+                            const Text(
                               'Tìm kiếm tên sách, tác giả...',
                               style: TextStyle(
                                 fontSize: 13,
-                                color: isDark
-                                    ? const Color(0xFF6C757D)
-                                    : const Color(0xFFADB5BD),
+                                color: Color(0xFF8B4513),
                               ),
                             ),
                           ],

@@ -58,26 +58,46 @@ class _SettingsScreenState extends State<SettingsScreen> {
             expandedHeight: 200,
             pinned: true,
             automaticallyImplyLeading: false,
-            backgroundColor: colorScheme.primary,
+            backgroundColor: const Color(0xFF8B4513),
+            // ── Nút quay lại ────────────────────────────────────────────
+            leading: Navigator.canPop(context)
+                ? IconButton(
+                    icon: const Icon(Icons.arrow_back_ios_new_rounded,
+                        color: Colors.white),
+                    tooltip: 'Quay lại',
+                    onPressed: () => Navigator.pop(context),
+                  )
+                : null,
             flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [colorScheme.primary, const Color(0xFF364FC7)],
+              background: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image.asset(
+                    'assets/images/library_banner.png',
+                    fit: BoxFit.cover,
                   ),
-                ),
-                child: SafeArea(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Cài Đặt',
-                          style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700),
-                        ),
+                  Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0xCC5C2A0D),
+                          Color(0xDD8B4513),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(64, 16, 20, 0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Cài Đặt',
+                            style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700),
+                          ),
                         const SizedBox(height: 20),
                         if (_user != null)
                           Row(
@@ -123,10 +143,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               ),
                             ],
                           ),
-                      ],
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
             ),
           ),
